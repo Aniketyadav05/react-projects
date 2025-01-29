@@ -18,7 +18,7 @@ const Footer = () => {
                 >
                     <img
                         src="/logo.png"
-                        alt="GitHub Logo"
+                        alt="My Logo"
                         className="h-6 hover:filter hover:brightness-50"
                     />
                 </a>
