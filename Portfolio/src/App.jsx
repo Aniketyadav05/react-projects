@@ -1,19 +1,10 @@
 import React from 'react'
-import { Scroll,Header,Footer,Loader } from './Components/index'
-import { Outlet } from 'react-router-dom'
+import { Header } from './Components'
 const App = () => {
   return (
-    <Scroll>
-      <Loader>
-        <div className="min-h-screen flex flex-col bg-[#C4BCB3]">
-          <Header />
-          <main className="flex-grow w-full">
-            <Outlet />
-          </main>
-          <Footer />
-        </div>
-      </Loader>
-    </Scroll>
+    <div className='bg-black h-[100vh]'>
+    <Header/>
+  </div>
   )
 }
 

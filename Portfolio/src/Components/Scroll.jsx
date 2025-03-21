@@ -1,35 +1,44 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, createContext, useContext } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
+const LocoContext = createContext();
+
+export const useLocoScroll = () => useContext(LocoContext);
+
 const Scroll = ({ children }) => {
   const scrollRef = useRef(null);
+  const locoScrollRef = useRef(null);
 
   useEffect(() => {
-    const locoScroll = new LocomotiveScroll({
+    locoScrollRef.current = new LocomotiveScroll({
       el: scrollRef.current,
       smooth: true,
-      lerp: 0.1, // smoothness control
-      multiplier: 1, // scroll speed
-      getDirection: true, 
+      lerp: 0.1,
+      multiplier: 1,
+      getDirection: true,
     });
 
-    // Update on resize
-    const handleResize = () => locoScroll.update();
+    const handleResize = () => locoScrollRef.current.update();
     window.addEventListener("resize", handleResize);
 
-    // Update after content load
     setTimeout(() => {
-      locoScroll.update();
+      locoScrollRef.current.update();
     }, 1000);
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      locoScroll.destroy();
+      locoScrollRef.current.destroy();
     };
   }, []);
 
-  return <div ref={scrollRef} data-scroll-container>{children}</div>;
+  return (
+    <LocoContext.Provider value={locoScrollRef}>
+      <div ref={scrollRef} data-scroll-container>
+        {children}
+      </div>
+    </LocoContext.Provider>
+  );
 };
 
 export default Scroll;
