@@ -1,5 +1,6 @@
 import React from 'react'
 import {Elements, ElementText,Btn} from "./index"
+import { third,first } from '../assets'
 const Upcoming = () => {
   return (
     <div className=' bg-[#C4BCB3] flex flex-row justify-between items-center w-[100%] h-[130vh] pt-12 px-4 pb-6'>
@@ -23,7 +24,7 @@ const Upcoming = () => {
 
           </div>
           <div className='h-[68vh] w-[100%] bg-[#C4BCB3] pt-4'>
-          <img className='h-[100%] w-[100%] object-cover px-[20px] ' src="https://cdn.prod.website-files.com/5f2429f172d117fcee10e819/605c679f33f67d3dd00b04b4_avatar-3.jpeg" alt="" />
+          <img className='h-[100%] w-[100%] object-cover px-[20px] ' src={first} alt="" />
 </div>     
              </div>
       <div className="right w-[35%] h-[100%] pl-8 ">
