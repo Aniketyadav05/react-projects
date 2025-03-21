@@ -12,9 +12,9 @@ const Footer = () => {
             <h2>LEGAL</h2>
             </div>
             <div className='space-x-5'>
-                <Link target='_blank'to='https://x.com/AniketYadav05_'>X </Link>
-                <Link target='_blank'to='https://www.linkedin.com/in/aniketyadav05/'>LinkedIn</Link>
-                <Link target='_blank'to='https://github.com/Aniketyadav05'>Github</Link>
+                <Link target='_blank'to='https://x.com/AniketYadav05_' >X </Link>
+                <Link target='_blank'to='https://www.linkedin.com/in/aniketyadav05/' >LinkedIn</Link>
+                <Link target='_blank'to='https://github.com/Aniketyadav05' >Github</Link>
                 
             </div>
         

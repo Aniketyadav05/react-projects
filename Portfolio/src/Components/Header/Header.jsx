@@ -30,12 +30,15 @@ const Header = () => {
     <AnimatePresence>
         {showMenu && (
           <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ duration: 0.5 }}
-            className='fixed font-[Canopee] top-0 right-0 h-screen w-full text-[#BEB5AB] bg-black flex flex-col items-center justify-center z-50'
-          >
+          initial={{ y: '100%', skewY: 20,
+            transition:{ duration: 1.2, ease: [0.57, 0, 0.75, 2.5] }
+           }}
+          animate={{ y: 0, skewY: 0,transition:{ duration: 1.2, ease: [0.57, 0, 0.75, 2] } }}
+          exit={{ x: '100%', skewX: 40,transition:{ duration: 1.2, ease: [0.57, 0, 0.75, 0] } }}
+           // this cubic bezier curve feels smooth & wave-like
+          className='fixed font-[Canopee] top-0 right-0 h-screen w-full text-[#BEB5AB] bg-black flex flex-col items-center justify-center z-50'
+        >
+        
             <Link to="/" className='absolute top-10 cursor-pointer'>
             <h5 className='text-xl mFont '>The Paper Portfolio</h5>
             </Link >
