@@ -13,7 +13,7 @@ export const heroSectionsData = [
         h31: "A FEATURED SELECTION",
         h32: "OF THE LATEST WORK",
         h33: "OF THE LAST YEARS",
-        span: "DRAG SIDEWAYS TO NAVIGATE",
+        span: "Go down to know more about me",
         he2Size: "text-[80px] leading-20",
         className:"border-l-2"
       },
@@ -30,7 +30,7 @@ export const heroSectionsData = [
         imgUrl: ResumeGen,
         heading: "Resume Generator",
         span: "FEATURED",
-        para: "Another awesome project description goes here.",
+        para: "Fill in your details and generate your resume within seconds",
         link:"https://aniprojects-web.github.io/Resume-builder/"
       },
       elementText: {
@@ -38,7 +38,7 @@ export const heroSectionsData = [
         h31: "FRESH IDEAS",
         h32: "LATEST DESIGNS",
         h33: "CUTTING EDGE",
-        span: "DRAG TO EXPLORE",
+        span: "Connect me to make your dream ideas real",
         he2Size: "text-[70px] leading-18",
          className:"border-l-2"
       },
@@ -46,7 +46,7 @@ export const heroSectionsData = [
         imgUrl: "second-thumbnail.jpeg",
         heading: "PROJECT Y",
         span: "HOT",
-        para: "Short description about another project.",
+        para: "Description",
         link:"/"
       }
     }
