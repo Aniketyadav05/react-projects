@@ -1,11 +1,19 @@
 import React from 'react'
-import Student from './Student'
-
+import { Scroll,Header,Footer,Loader } from './Components/index'
+import { Outlet } from 'react-router-dom'
 const App = () => {
   return (
-    <div>
-      <Student></Student>
-    </div>
+    <Scroll>
+      <Loader>
+        <div className="min-h-screen flex flex-col bg-[#C4BCB3]">
+          <Header />
+          <main className="flex-grow w-full">
+            <Outlet />
+          </main>
+          <Footer />
+        </div>
+      </Loader>
+    </Scroll>
   )
 }
 

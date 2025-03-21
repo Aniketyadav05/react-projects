@@ -26,6 +26,7 @@ const CountryCard = ({country}) => {
             <p>
               <span className='card-description'>Region:</span>
               {region}
+              {console.log(region)}
             </p>
             <NavLink to={`/country/${name.common}`}>
               <button>Read More</button>

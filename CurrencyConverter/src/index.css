@@ -1,0 +1,11 @@
+@import "tailwindcss";
+*{
+  box-sizing: border-box;
+  font-family: 'montserrat';
+  
+}
+body{
+ 
+  height: 100%;
+  width:100%;
+}

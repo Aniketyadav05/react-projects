@@ -1,32 +1,114 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S+Guides:ital@0;1&display=swap');
+
+
+
+
+@font-face {
+  font-family: 'Canopee';
+  src: url(./Fonts/Canopee.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'CondMedium';
+  src: url(./Fonts/CondMedium.ttf) format('truetype');
+}
+@font-face{
+  font-family: 'Light';
+  src: url(./Fonts/Light.ttf) format('truetype');
 }
 
-/* CSS */
-.button-2 {
-  background-color: rgba(102, 255, 0, 0.967);
-  border-radius: 8px;
-  border-width: 0;
-  color: #333333;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
+
+@import "tailwindcss";
+
+
+.play{
+  font-family: "Playwrite GB S Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+*{
+  scrollbar-width: none;
+ 
+}
+html, body {
+  overflow: hidden;
   margin: 0;
-  padding: 10px 12px;
-  text-align: center;
-  transition: all 200ms;
-  vertical-align: baseline;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  padding: 0;
+  height: 100%;
+}
+
+[data-scroll-container] {
+  overflow: hidden;
+}
+body{
+  background-color: black;
+ 
+}
+.stamp-border {
+  clip-path: polygon(
+    5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 
+    5% 100%, 0% 95%, 0% 5%
+  );
+  border-radius: 15px;
+}
+
+.page1 {
+  min-height: 110vh;
+  width: 100vw;
+  background-color: #C4BCB3;
+  position: relative;
+  overflow: hidden;
+}
+.header{
+  padding: 0 30px;
+  border-bottom: 1px solid black;
+  font-family: 'Canopee';
+}
+.BSS {
+  font-family: "Big Shoulders Stencil", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.Oswald {
+  font-family: "Oswald", sans-serif;
+}
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(calc(-100% - 34px));
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-40%);
+  }
+}
+
+.marquee-animation {
+  animation: marquee 15s linear;
+  animation-iteration-count: infinite;
+}
+
+.scroll-animation h1 {
+  animation-timing-function: linear;
+  margin-right: 30px;
+  animation-name: scroll;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.scroll-animation:hover h1{
+  animation-play-state: paused;
+}
+.scroll::-webkit-scrollbar {
+  display: none;
 }
