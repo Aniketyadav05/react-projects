@@ -9,7 +9,7 @@ const Loader = ({children}) => {
 
     tl.to(pageRef.current, {
       y: "100vh",
-      scale: 0.6,
+      scale: 0.65,
       duration: 0,
     })
       .to(pageRef.current, {
